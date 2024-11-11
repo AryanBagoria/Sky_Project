@@ -1,0 +1,127 @@
+#fixed-buttons-left {
+    transition: opacity 0.3s, visibility 0.3s;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    z-index: 50;
+    /* Ensure it is above other elements */
+}
+
+#hamburger-nav {
+    display: none;
+
+}
+
+.hamburger-menu {
+    position: relative;
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    width: 26px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    /* Add transition for hamburger icon */
+}
+
+.hamburger-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    transition: all 0.3s ease-in-out;
+    /* Keep transition for hamburger icon */
+}
+
+.menu-links {
+    position: absolute;
+    top: calc(100% + 10px);
+    /* Position the menu right below the header */
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    /* Add transition for menu links */
+}
+
+.menu-links ul {
+    padding: 0;
+}
+
+.menu-links {
+    position: absolute;
+    top: calc(100% + 10px);
+    /* Position the menu right below the header */
+    right: 0;
+    background-color: rgb(0, 0, 0);
+    width: 100px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    /* Add transition for menu links */
+    z-index: 1000;
+    /* Ensure it stays on top */
+}
+
+.menu-links.open {
+    max-height: 1000px;
+}
+
+.menu-links li {
+    list-style: none;
+}
+
+.hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -5px);
+}
+
+#fixed-buttons {
+    transition: opacity 0.3s, visibility 0.3s;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    z-index: 50;
+    /* Ensure it is above other elements */
+}
+
+.main-img,
+.overlay-img {
+    transition: transform 0.3s ease-in-out;
+}
+
+@media (min-width: 1024px) {
+    #menu-hide {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .overlay-img {
+        display: none;
+    }
+
+    #fixed-buttons-left {
+        display: none;
+    }
+
+    #hide-name {
+        display: none;
+    }
+}
+
+
+
+
+
